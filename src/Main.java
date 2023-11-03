@@ -9,12 +9,12 @@ public class Main {
     ZooManagement zm1 = new ZooManagement();
     zm1.nbrCages = nbrCageSaisie;
         System.out.println(zm.zooName + " comporte " + zm1.nbrCages);
-    Animal lion = new Animal();
+    Animal lion = new Animal("azerty","lotfi",4 ,true);
     lion.name ="lotfi";
     lion.age = 4;
     lion.family= "azerty";
     lion.isMammal=true ;
-    Zoo myzoo =new Zoo();
+    Zoo myzoo =new Zoo("ichkil", "tunis",25);
     myzoo.animals = new Animal[25] ;
     myzoo.name = "ichkil" ;
     myzoo.city = "tunis";
