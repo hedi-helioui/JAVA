@@ -39,5 +39,10 @@ if (nbrAnimals==nbrCages){
     return x;
     }
 
-
+void afficherAnimals(){
+        for (int i=0 ;i<animals.length;i++)
+        {
+            System.out.println(animals[i]);
+        }
+}
 }
