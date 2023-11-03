@@ -32,7 +32,7 @@ public class Main {
 myzoo.afficherAnimals();
         System.out.println(myzoo.searchAnimal(cat));
         System.out.println(myzoo.searchAnimal(lion));
-
+ System.out.println(myzoo.removeAnimal(lion));
 
     }
 }

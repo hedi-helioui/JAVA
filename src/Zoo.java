@@ -45,4 +45,17 @@ void afficherAnimals(){
             System.out.println(animals[i]);
         }
 }
+boolean removeAnimal(Animal animal){
+    int x=searchAnimal(animal);
+        if ( x == -1 )
+            return false ;
+        else
+            for (int i=x ; i< nbrAnimals; i++)
+            {
+                animals[i]= animals[i+1];
+                animals[nbrAnimals]=null ;
+                this.nbrAnimals-- ;
+                }
+return true ;
+}
 }
