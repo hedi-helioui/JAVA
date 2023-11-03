@@ -3,6 +3,8 @@ Animal [] animals ;
 String name ;
 String city ;
 int nbrCages ;
+int nbrAnimals;
+
     public Zoo(String name, String city, int nbrCages) {
         animals = new Animal[nbrCages];
         this.name = name;
@@ -16,4 +18,26 @@ int nbrCages ;
     @Override
     public String toString() {
         return "name:"+ name +"\ncity:"+ city + "\nnombre de cages:"+ nbrCages ;}
+
+    boolean addAnimal(Animal animal) {
+if ( searchAnimal(animal) != -1){
+    return false ;}
+if (nbrAnimals==nbrCages){
+    return false;}
+
+        animals[nbrAnimals] = animal;
+        nbrAnimals++;
+        return true;
+    }
+
+
+    int searchAnimal(Animal animal)
+    { int x=-1;
+        for (int i=0;i< nbrAnimals ;i++) {
+            if (animal.name == animals[i].name)
+        return i; }
+    return x;
+    }
+
+
 }

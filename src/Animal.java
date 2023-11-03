@@ -17,4 +17,5 @@ boolean isMammal ;
     @Override
     public String toString() {
         return "name:"+ name + "\nage:"+ age+ "\nfamily:"+family+"\nisMammal:"+ isMammal ;}
+
 }
