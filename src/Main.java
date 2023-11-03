@@ -19,8 +19,11 @@ public class Main {
     myzoo.name = "ichkil" ;
     myzoo.city = "tunis";
     myzoo.nbrCages= 25;
-
-
-
+ //  myzoo.displayZoo();
+        System.out.println(myzoo);
+        //System.out.println(myzoo.toString());
+    //lion.displayAnimal();
+        System.out.println(lion);
+        //System.out.println(lion.toString());
     }
 }
