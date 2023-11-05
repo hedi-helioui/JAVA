@@ -15,7 +15,7 @@ public class Main {
     lion.age = 4;
     lion.family= "azerty";
     lion.isMammal=true ;
-    Zoo myzoo =new Zoo("ichkil", "tunis",25);
+    Zoo myzoo =new Zoo("ichkil", "tunis");
     myzoo.animals = new Animal[nbrCageSaisie] ;
     myzoo.name = "ichkil" ;
     myzoo.city = "tunis";
