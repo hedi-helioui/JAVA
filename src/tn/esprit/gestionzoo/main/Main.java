@@ -13,6 +13,7 @@ public class Main{
     zm1.nbrCages = nbrCageSaisie;
     System.out.println(zm.zooName + " comporte " + zm1.nbrCages);
 
+        System.out.println("------------------------------------------------------------------");
 
     Animal lion = new Animal();
     Animal cat = new Animal();
@@ -32,6 +33,7 @@ public class Main{
 //lion.displayAnimal();
 // System.out.println(lion);
 //System.out.println(lion.toString());
+        System.out.println("------------------------------------------------------------------");
 
         myzoo.addAnimal(lion);
         myzoo.addAnimal(cat);
@@ -39,6 +41,21 @@ public class Main{
         System.out.println(myzoo.searchAnimal(cat));
         System.out.println(myzoo.searchAnimal(lion));
         System.out.println(myzoo.removeAnimal(lion));
+
+        System.out.println("------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------");
+
+        Terrestrial terrestrial = new Terrestrial("Panda", "Narla", 4, true, 2);
+    Aquatic aquatic = new Aquatic("Fish", "Sardine", 2, true, "Sea");
+    Dolphin dolphin = new Dolphin("Delphinidae", "Flipper", 5, true, "Ocean", 14.5f);
+    Penguin penguin = new Penguin("Spheniscidae", "Skipper", 3, true, "Ocean", 25.3f);
+
+    aquatic.swim();
+    dolphin.swim();
+    penguin.swim();
+
+
+
 
     }
 }
