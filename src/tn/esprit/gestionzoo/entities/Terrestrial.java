@@ -9,6 +9,6 @@ public class Terrestrial extends Animal {
         this.nbrlegs=nbrlegs;
     }
 public String toString(){
-        return "nbrlegs: " + nbrlegs;
+        return super.toString() +  "nbrlegs: " + nbrlegs;
 }
 }

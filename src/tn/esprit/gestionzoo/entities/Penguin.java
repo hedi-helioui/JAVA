@@ -9,9 +9,7 @@ public Penguin(String family ,String name ,int age ,boolean isMammal,String  hab
         this.swimmingDepth=swimmingDepth;
 }
 public String toString(){
-        return "swimmingDepth:" + swimmingDepth;
+        return super.toString() + "swimmingDepth:" + swimmingDepth;
 }
-public void swim(){
-    System.out.println("the penguin is swimming");
-}
+
 }

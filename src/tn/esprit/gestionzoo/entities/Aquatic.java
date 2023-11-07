@@ -10,7 +10,7 @@ public class Aquatic extends  Animal  {
         this.habitat=habitat;
     }
 public String toString(){
-        return "habitat:" + habitat;
+        return super.toString()+"habitat:" + habitat;
 }
 public void swim(){
     System.out.println("this aquatic animal is swimming");
