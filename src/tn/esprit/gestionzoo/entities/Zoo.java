@@ -1,5 +1,7 @@
 package tn.esprit.gestionzoo.entities;
 
+import javax.management.InvalidAttributeValueException;
+
 public class Zoo extends Animal {
     private Animal[] animals;
     private String name;
@@ -75,21 +77,24 @@ public class Zoo extends Animal {
         return "name:" + name + "\ncity:" + city + "\nnombre de cages:" + nbrCages;
     }
 
-    public boolean addAnimal(Animal animal) {
-        boolean b = isZooFull();
-        if (b == false) {
-            System.out.println("zoo FULL");
-        } else if (searchAnimal(animal) != -1) {
-            return false;
+    public void addAnimal(Animal animal) throws ZooFullException,InvalidAgeException {
+
+        if (searchAnimal(animal) != -1) {
+            throw new ZooFullException("l'animal n'existe pas");
         }
         if (nbrAnimals == nbrCages) {
-            return false;
+            throw new ZooFullException("les cages sont pleinnes");
         }
+        if (animal.getAge()<0){
+           throw new InvalidAgeException("l'age ne doit pas etre negatif");
+        }
+
 
         animals[nbrAnimals] = animal;
         nbrAnimals++;
-        return true;
-    }
+        System.out.println(animal.getName()+" added successfully!");;
+        System.out.println("number of animals :"+nbrAnimals);
+            }
 
 
     public int searchAnimal(Animal animal) {

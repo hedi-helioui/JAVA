@@ -25,6 +25,10 @@ public class Main{
     myzoo.setAnimals(new Animal[nbrCageSaisie]);
     myzoo.setName("ichkil");
     myzoo.setCity("tunis");
+        cat.setName("mohsen");
+        cat.setAge(2);
+        cat.setFamily("qwerty");
+        cat.setMammal(true);
 
 // myzoo.nbrCages= 25;
 //  myzoo.displayZoo();
@@ -35,8 +39,24 @@ public class Main{
 //System.out.println(lion.toString());
         System.out.println("------------------------------------------------------------------");
 
-        myzoo.addAnimal(lion);
-        myzoo.addAnimal(cat);
+       try{
+           myzoo.addAnimal(lion);
+       }
+       catch(ZooFullException E){
+           System.out.println(E.getMessage());
+       }
+       catch(InvalidAgeException Exe){
+           System.out.println(Exe.getMessage());
+       }
+        try{
+
+            myzoo.addAnimal(cat);}
+        catch(ZooFullException Ex){
+            System.out.println(Ex.getMessage());
+        }
+        catch(InvalidAgeException Exec){
+            System.out.println(Exec.getMessage());
+        }
         myzoo.afficherAnimals();
         System.out.println(myzoo.searchAnimal(cat));
         System.out.println(myzoo.searchAnimal(lion));
@@ -62,5 +82,6 @@ public class Main{
         myzoo.addAquaticAnimals(penguin1);
         System.out.println(myzoo.maxPenguinSwimmingDepth());
     }
-    
+
 }
+
