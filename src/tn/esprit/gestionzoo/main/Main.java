@@ -46,16 +46,21 @@ public class Main{
         System.out.println("------------------------------------------------------------------");
 
         Terrestrial terrestrial = new Terrestrial("Panda", "Narla", 4, true, 2);
-    Aquatic aquatic = new Aquatic("Fish", "Sardine", 2, true, "Sea");
     Dolphin dolphin = new Dolphin("Delphinidae", "Flipper", 5, true, "Ocean", 14.5f);
     Penguin penguin = new Penguin("Spheniscidae", "Skipper", 3, true, "Ocean", 25.3f);
+        Penguin penguin1 = new Penguin("Spheniscidae", "reppper", 3, true, "Ocean", 30.3f);
 
-    aquatic.swim();
     dolphin.swim();
     penguin.swim();
+    System.out.println("------------------------------------------------------------------");
 
-
-
-
+        System.out.println("donner le nombre des animaux aquatic \n");
+        int nbrAquatic = sc.nextInt();
+        myzoo.setNbrAquatic(nbrAquatic);
+        myzoo.addAquaticAnimals(penguin);
+        myzoo.addAquaticAnimals(dolphin);
+        myzoo.addAquaticAnimals(penguin1);
+        System.out.println(myzoo.maxPenguinSwimmingDepth());
     }
+    
 }
